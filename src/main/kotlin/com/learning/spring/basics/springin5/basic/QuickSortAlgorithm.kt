@@ -1,10 +1,9 @@
-package com.learning.spring.basics.springin5
+package com.learning.spring.basics.springin5.basic
 
 import org.springframework.context.annotation.Primary
 import org.springframework.stereotype.Component
 
 @Component
-@Primary
 class QuickSortAlgorithm: SortAlgorithim {
     override fun sort(numbers: Array<Int>): Array<Int> {
         // assume the logic works

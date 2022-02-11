@@ -1,10 +1,13 @@
-package com.learning.spring.basics.springin5
+package com.learning.spring.basics.springin5.basic
 
 import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.beans.factory.config.ConfigurableBeanFactory
+import org.springframework.context.annotation.Scope
 import org.springframework.stereotype.Component
 
 @Component
-class BinarySearchImpl(@Autowired private val sortAlgorithim: SortAlgorithim) {
+@Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
+class BinarySearchImpl(@Autowired private val sortAlgorithim: BubbleSortAlgorithim) {
 
     fun binarySearch(numbers: Array<Int>, numberToSearchFor: Int): Int {
         // sort array
